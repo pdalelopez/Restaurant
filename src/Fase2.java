@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -38,9 +39,28 @@ public class Fase2 {
 		for (int i=0; i<prices.length; i++) {
 			prices[i]= input.nextDouble();	
 		}
-		
+		System.out.println(Arrays.toString(menu));
 		System.out.println(Arrays.toString(prices));
 		
+		
+		ArrayList<String> orderList = new ArrayList<String>();
+		
+	
+		System.out.println("que plato desea?" + Arrays.toString(menu));
+		int answer = 1;
+		
+		while (answer==1) {
+			
+			orderList.add(input.next());
+			System.out.println("Desea otro plato SI=1, NO=0:");
+			answer = input.nextInt();
+			
+			if (answer == 1) {
+			System.out.println("Cual otro?");	
+			}	
+		}
+		
+		System.out.println("Su orden es " + orderList);
 	}
 
 }
