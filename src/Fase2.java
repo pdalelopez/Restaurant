@@ -39,7 +39,7 @@ public class Fase2 {
 		for (int i=0; i<prices.length; i++) {
 			prices[i]= input.nextDouble();	
 		}
-		System.out.println(Arrays.toString(menu));
+		
 		System.out.println(Arrays.toString(prices));
 		
 		
