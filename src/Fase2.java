@@ -21,10 +21,17 @@ public class Fase2 {
 		fiveHundred=500;
 		
 		double totalPrice;
+		
+		//ARRAYS
+		String menu[]=new String[5];
+		double prices[]= new double[5];
+		
+		
+		//Fase2
 		//setting menu's meals
 		System.out.println("entry five menu's meals:");
 		Scanner input = new Scanner (System.in);
-		String menu[]=new String[5];
+		
 		
 		for (int i=0; i<menu.length; i++) {
 			menu[i]= input.next();	
@@ -34,7 +41,7 @@ public class Fase2 {
 		
 		
 		System.out.println("entry five prices for each menu's meal:");
-		double prices[]= new double[5];
+		
 		
 		for (int i=0; i<prices.length; i++) {
 			prices[i]= input.nextDouble();	

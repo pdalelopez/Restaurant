@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+
 public class Fase3 {
 
 	public static void main(String[] args) {
@@ -17,10 +18,14 @@ public class Fase3 {
 		fiveHundred=500;
 		
 		double totalPrice=0;
+		double prices[]= new double[5];
+		String menu[]=new String[5];
+		
+		
 		//setting menu's meals
 		System.out.println("entry five menu's meals:");
 		Scanner input = new Scanner (System.in);
-		String menu[]=new String[5];
+		
 		
 		for (int i=0; i<menu.length; i++) {
 			menu[i]= input.next();	
@@ -30,7 +35,7 @@ public class Fase3 {
 		
 		
 		System.out.println("entry five prices for each menu's meal:");
-		double prices[]= new double[5];
+		
 		
 		for (int i=0; i<prices.length; i++) {
 			prices[i]= input.nextDouble();	
@@ -62,19 +67,19 @@ public class Fase3 {
 		
 		for (int i=0; i<orderList.size(); i++) {
 			
-			for (int j=0; j<menu.length;j++) {
 				
-				if (orderList.get(i)==menu[j]) {
+			if (Arrays.asList(menu).contains(orderList.get(i))) {
+				
+			totalPrice = totalPrice + prices[Arrays.asList(menu).indexOf(orderList.get(i))];
 					
-					totalPrice = totalPrice + prices[j];
-					j=5;
-				}
+			}else {
 				
-				
+				System.out.println("This meal \""+ orderList.get(i)+ "\" doesn't exist in menu");
 				
 			}
-			
 		}
+		
+		System.out.println("you must pay= "+totalPrice);
 	}
 
 }

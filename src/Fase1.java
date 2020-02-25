@@ -17,7 +17,7 @@ public class Fase1 {
 		
 		double totalPrice;
 		
-		String menu[] = {"Pizza","Burguer","Nachos","Grilled Chicken","Soup"};
+		String[] menu = {"Pizza","Burguer","Nachos","Grilled Chicken","Soup"};
 		double prices[] = {10.50,12.00,8.5,14.20,6.50};
 		
 		System.out.println(Arrays.toString(menu));
